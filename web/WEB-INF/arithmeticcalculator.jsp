@@ -12,16 +12,18 @@
         <title>Arithmetic Calculator</title>
     </head>
     <body>
-        <h1>Arithmetic Calculator</h1>
+        <form method = "get" action = "arithmetic">
+            <h1>Arithmetic Calculator</h1>
         
-        <label>First </label><input id="first" type = "number"><br>
-        <label>Second </label><input id="first" type = "number"><br>
-            <input type="button" value="+" onclick= ${message} = first + second>
-            <input type="button" value="-" onclick= ${message} = first - second>
-            <input type="button" value="*" onclick= ${message} = first * second>
-            <input type="button" value="%" onclick= ${message} = first % second>
-        <br>
-        <label>Result: ${message}</label><br>
+            <label>First </label><input id="first" type = "number"><br>
+            <label>Second </label><input id="second" type = "number"><br>
+                <input type="submit" value = "+" onclick= add(first, second)>
+                <input type="submit" value = "-" onclick= minus(first, second)>
+                <input type="submit" value = "*" onclick= multiply(first, second)>
+                <input type="submit" value = "%" onclick= remainder(first, second)>
+            <br>
+            <label>Result: ${message}</label><br>
+        </form>
         <a href = "age">Age Calculator</a>
     </body>
 </html>

@@ -39,5 +39,26 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             //call the page again so the user can fill the field
             getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
         }
+        else {
+            request.setAttribute("message", "---");
+            getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response);
+        }
+            
+    }
+    protected int add(int first, int second){
+        int message = first + second;
+        return message;
+    }
+    protected int minus(int first, int second){
+        int message = first - second;
+        return message;
+    }
+    protected int multiply(int first, int second){
+        int message = first * second;
+        return message;
+    }
+    protected int remainder(int first, int second){
+        int message = first % second;
+        return message;
     }
 }
